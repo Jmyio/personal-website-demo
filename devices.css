@@ -4,7 +4,9 @@
 @media only screen and (max-width: 450px) {
 
     * {
-        user-select: none;
+       user-select: none;
+       -webkit-touch-callout: none;
+       -webkit-user-select: none;
     }
     
     .navbar-container ul {
