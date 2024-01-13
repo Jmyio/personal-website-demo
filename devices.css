@@ -2,6 +2,10 @@
 
 /* for iphones */
 @media only screen and (max-width: 450px) {
+
+    * {
+        user-select: none;
+    }
     
     .navbar-container ul {
         display: none;
