@@ -1,0 +1,420 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Mukta', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    padding-left: 8%;
+    padding-right: 8%;
+    width: 100%;
+}
+
+.container h1 {
+    font-size: 60px;
+}
+
+.page {
+    height: 100vh;
+}
+
+/* nav styles */
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.navbar-name {
+    font-size: 20px;
+}
+
+.navbar-container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+/* header styles */
+
+.header-container {
+    background-image: url(img/Main-Background.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header div {
+    width: fit-content;
+}
+
+.header-container h1 {
+    line-height: 80px;
+}
+
+span {
+    background-image: linear-gradient(to right, #EC8164, #F14C63);
+    -webkit-background-clip: text; /* For Safari/Chrome */
+    background-clip: text;
+    color: transparent;
+}
+
+.header p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.cv-btn {
+    margin-top: 20px;
+    padding: 15px 40px;
+    background: transparent;
+    color: white;
+    border: 1px solid #F14C63;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cv-btn:hover {
+    background: linear-gradient(to right, #EC8164, #F14C63);
+}
+
+/* typewriter animation */
+
+.typewriter {
+    font-weight: 200;
+    overflow: hidden;
+    border-right: 2px solid #F14C63;
+    white-space: nowrap;
+    margin: 0;
+    animation: 
+        typing 2.5s steps(90, end),
+        blink-caret 1s step-end infinite;
+}
+
+.line2 {
+    visibility: hidden;
+    animation-delay: 2.1s;
+}
+
+.hide-cursor {
+    border-right: none;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: white }
+    50% { border-color: transparent; }
+}
+
+/* about styles */
+
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about {
+    width: 35%;
+    font-weight: 200;
+}
+
+.larger-about {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.about-img {
+    width: 40%;
+    height: 70%;
+    background-image: url(img/about2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* skills styles */
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skills-img {
+    width: 35%;
+    height: 70%;
+    background-image: url(img/about.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.skills {
+    width: 40%;
+    font-weight: 200;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
+    grid-template-rows: repeat(4, 1fr); /* 2 rows */
+    gap: 20px; /* Adjust the gap between grid items */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    height: fit-content;
+    width: 100%;
+}
+
+.grid-blocks {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.lang-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+}
+
+.lang-container i {
+    margin-right: 10px;
+}
+
+.lang-level {
+    height: 4px;
+    width: 80%;
+    border-radius: 1px;
+    background-color: aliceblue;
+}
+
+.skill-perc {
+    height: 100%;
+    background: linear-gradient(to right, #EC8164, #F14C63);
+}
+
+.eight {
+    width: 80%;
+}
+
+.four {
+    width: 40%;
+}
+
+.seven {
+    width: 70%;
+}
+
+.six {
+    width: 60%;
+}
+
+.five {
+    width: 50%;
+}
+
+/* projects styles */
+
+.projects-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-container h1 {
+    margin-bottom: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0;
+    height: fit-content;
+    width: 100%;
+}
+
+.projects-blocks {
+    height: 220px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img1 {
+    background-image: url(img/1.png);
+}
+
+.img2 {
+    background-image: url(img/2.png);
+}
+
+.img3 {
+    background-image: url(img/3.png);
+}
+
+.img4 {
+    background-image: url(img/4.png);
+}
+
+.img5 {
+    background-image: url(img/5.png);
+}
+
+.img6 {
+    background-image: url(img/6.png);
+}
+
+.img7 {
+    background-image: url(img/7.png);
+}
+
+.img8 {
+    background-image: url(img/8.png);
+}
+
+.img9 {
+    background-color: white;
+}
+
+.projects-img {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(180deg, rgba(69, 69, 69, 0.6) 20%, rgb(0, 0, 0, 0.6) 80%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.lang-used {
+    font-size: 30px;
+}
+
+.projects-blocks:hover .projects-img {
+    transform: scale(1.1);
+}
+
+.projects-blocks:hover .layer{
+    height: 100%;
+}
+
+/* contact styles */
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-img {
+    width: 35%;
+    height: 70%;
+    background-image: url(img/contact.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.contact {
+    width: 40%;
+    font-weight: 200;
+}
+
+.contact-row1 {
+    margin-bottom: 20px;
+}
+
+.contact-row1 a {
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+.contact-row1 a:hover {
+    background-image: linear-gradient(to right, #EC8164, #F14C63);
+    -webkit-background-clip: text; /* For Safari/Chrome */
+    background-clip: text;
+    color: transparent;
+}
+
+form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 10px;
+    margin: 5px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+form .cv-btn {
+    margin-top: 5px;
+}
