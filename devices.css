@@ -4,25 +4,25 @@
 @media only screen and (max-width: 450px) {
 
     * {
-       user-select: none;
-       -webkit-touch-callout: none;
-       -webkit-user-select: none;
-    }
-    
-    .navbar-container ul {
-        display: none;
+        user-select: none;
     }
 
-    .navbar-name {
-        font-size: 30px;
+    .container h1 {
+        font-size: 50px;
     }
 
     .page {
         height: 60vh;
     }
 
-    .cv-btn {
-        background: linear-gradient(to right, #EC8164, #F14C63);
+    /* navbar */
+
+    .navbar-container ul {
+        display: none;
+    }
+
+    .navbar-name {
+        font-size: 30px;
     }
 
     /* header */
@@ -39,6 +39,10 @@
 
     .header-container p {
         line-height: 20px;
+    }
+
+    .cv-btn {
+        background: linear-gradient(to right, #EC8164, #F14C63);
     }
 
     /* about */
@@ -88,13 +92,18 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(8, 1fr);
-        gap: 20px;
+        gap: 10px;
         margin: 0;
         height: fit-content;
         width: 100%;
     }
 
+    .projects-blocks {
+        height: 200px;
+    }
+
     /* contact */
+    
     .contact-container {
         display: flex;
         justify-content: center;
