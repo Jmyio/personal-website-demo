@@ -11,6 +11,32 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2100); // Make the second line visible after 2 seconds
 });
 
+const typewriterLine1 = document.querySelector('.typewriter.line1');
+const typewriterLine2 = document.querySelector('.typewriter.line2');
+const line1Text = 'A College Student of Computer Science';
+const line2Text = 'Beginner of Web, Software Development';
+
+function setTypewriters() {
+    let count = 0;
+    let interval = setInterval(() => {
+        if (count < line1Text.length) {
+            typewriterLine1.textContent += line1Text[count];
+            count++;
+        } else {
+            clearInterval(interval); // Stop the interval once line1 is finished typing
+            count = 0; // Reset the count for line2
+            interval = setInterval(() => {
+                if (count < line2Text.length) {
+                    typewriterLine2.textContent += line2Text[count];
+                    count++;
+                } else {
+                    clearInterval(interval); // Stop the interval once line2 is finished typing
+                }
+            }, 100);
+        }
+    }, 100);
+}
+
 import {skills, projects} from './listData.js';
 const skillsEntries = Object.entries(skills);
 const projectsEntries = Object.entries(projects);
@@ -86,3 +112,29 @@ function setProjectsGrid() {
 
 setSkillsGrid();
 setProjectsGrid();
+setTypewriters();
+
+// observer for fade in
+
+function handleIntersection(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+// Create an Intersection Observer
+const observer = new IntersectionObserver(handleIntersection, {
+  root: null, // Use the viewport as the root
+  threshold: 0.3, // The percentage of the item's visibility required to trigger the intersection callback
+});
+
+// Get the elements you want to observe
+const fadeElements = document.querySelectorAll('.fade-in');
+
+// Register each element with the observer
+fadeElements.forEach((element) => {
+  observer.observe(element);
+});

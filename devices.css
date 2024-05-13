@@ -13,7 +13,7 @@
     }
 
     .skills-container {
-        height: 80vh;
+        height: 60vh;
     }
 
     .skills-img {
@@ -110,6 +110,10 @@
 
     .skills {
         width: 100%;
+    }
+
+    .lang-container {
+        font-size: 20px;
     }
 
     /* projects */

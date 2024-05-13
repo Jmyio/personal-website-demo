@@ -113,27 +113,27 @@ span {
 .typewriter {
     font-weight: 200;
     overflow: hidden;
-    border-right: 2px solid #F14C63;
+    border-right: 2px solid white;
     white-space: nowrap;
     margin: 0;
     animation: 
-        typing 2.5s steps(90, end),
-        blink-caret 1s step-end infinite;
+        /* typing 1s steps(90, end), */
+        blink-caret 0.8s step-end infinite;
 }
 
-.line2 {
+/* .line2 {
     visibility: hidden;
-    animation-delay: 2.1s;
-}
+    animation-delay: 4s;
+} */
 
 .hide-cursor {
     border-right: none;
 }
 
-@keyframes typing {
+/* @keyframes typing {
     from { width: 0 }
     to { width: 100% }
-}
+} */
   
 @keyframes blink-caret {
     from, to { border-color: white }
@@ -431,4 +431,14 @@ form input, form textarea {
 
 form .cv-btn {
     margin-top: 5px;
+}
+
+/* fade in animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
 }
